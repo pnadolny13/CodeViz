@@ -20,20 +20,21 @@ public class ConnectToSrc {
 		};		
 		
 		// determine temp location
-		String tempLocation = tempPath(path);
-
+		Random rand = new Random();
+		int versionID = rand.nextInt(10000);
+		String tempLocation = path + "_CodeViz_" + versionID;
 		
 		if (command.equals("start")) {
 			// pass both variables to start class
 			//create copy using the new temp location
 			Start start = new Start();
-			start.run(path, tempLocation);
+			start.run(path, tempLocation, versionID + "");
 			
 		}
 		else if (command.equals("stop")) {
 			// pass both variables to stop class
 			Stop stop = new Stop();
-			stop.run(path, tempLocation);
+			stop.run(path);
 		}
 		else {
 			//restart
@@ -47,17 +48,4 @@ public class ConnectToSrc {
 		return path + "_CodeViz_" + rand.nextInt(10000);
 	}
 
-//	public String determineAction(String command) {
-//		String action = "";
-//		if (command.equals("start")) {
-//			// start
-//		}
-//		else if (command.equals("stop")) {
-//			// stop
-//		}
-//		else {
-//			//restart
-//		}
-//		return action;
-//	}
 }
