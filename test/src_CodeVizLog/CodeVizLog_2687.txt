@@ -1,0 +1,12 @@
+main from HelloWorld was executed
+method1 from Class1 was executed
+method1 from Class2 was executed
+method1 from Class3 was executed
+main from HelloWorld was executed
+method1 from Class1 was executed
+method1 from Class2 was executed
+method1 from Class3 was executed
+main from HelloWorld was executed
+method1 from Class1 was executed
+method1 from Class2 was executed
+method1 from Class3 was executed
