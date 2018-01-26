@@ -1,13 +1,12 @@
 package codeviz;
 
-public class Runner {
+public class Run extends Utility {
 	// user inputs -- start /path/to/src/dir
 	// or stop.. or restart
-	public static void main(String[] args) throws Exception {
-		String command = args[0];
-		String path = null;
-		if (command.equals("start") || command.equals("stop")) {
-			path = args[1];
+	public static void runs(String command, String path) throws Exception {
+//		String command = args[0];
+		if (command.equals(START) || command.equals(STOP)) {
+//			path = args[1];
 			if (path == null) {
 				throw new Exception("Need to define path to your src code directory!");
 			}

@@ -4,12 +4,14 @@ import java.io.File;
 import java.util.Random;
 
 
-public class ConnectToSrc {
+public class ConnectToSrc extends Utility {
 
 	public ConnectToSrc() {
 		// TODO Auto-generated constructor stub
 		// added to make update
 	}
+	
+
 
 	public void execute(String command, String path) throws Exception {
 		//String action = determineAction(command);
@@ -19,20 +21,19 @@ public class ConnectToSrc {
 		if (!file.exists()) {
 			throw new Exception("path doesn't exist!");
 		};		
-		
 		// determine temp location
 		Random rand = new Random();
 		int versionID = rand.nextInt(10000);
 		String tempLocation = path + "_CodeViz_" + versionID;
 		
-		if (command.equals("start")) {
+		if (command.equals(START)) {
 			// pass both variables to start class
 			//create copy using the new temp location
 			Start start = new Start();
 			start.run(path, tempLocation, versionID + "");
 			
 		}
-		else if (command.equals("stop")) {
+		else if (command.equals(STOP)) {
 			// pass both variables to stop class
 			Stop stop = new Stop();
 			stop.run(path);
