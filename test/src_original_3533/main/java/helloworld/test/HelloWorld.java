@@ -2,12 +2,7 @@ package helloworld.test;
 
 import helloworld.test2.Class3;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-
 public class HelloWorld {
-// < this is where we put the class CodeViz line to log data >
 
 	public static void main(String[] args) {
 		System.out.println("Hello World!!");

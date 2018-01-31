@@ -7,12 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-
 public class AppTest 
-// < this is where we put the class CodeViz line to log data >
     extends TestCase
 {
     /**
