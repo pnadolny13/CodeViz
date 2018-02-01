@@ -10,11 +10,12 @@ import codeviz.Run;
 @RestController
 public class Controller {
 	
-//    @RequestMapping("/")
-//    public String home() {
-//        return "success";
-//    }
-//	
+    @RequestMapping("/test")
+    public String home() {
+    	String userName = System.getProperty("user.name");
+        return "{ \"response\" : \"" + userName + "\" }";
+    }
+	
 	
     @RequestMapping("/start")
     public String start(@RequestParam(value="path") String path) {
@@ -23,9 +24,9 @@ public class Controller {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return "unsuccessful";
+			return "{ \"response\" : \"unsuccessful\" }";
 		}
-        return "success";
+    	return "{ \"response\" : \"successful\" }";
     }
     
     @RequestMapping("/stop")
@@ -37,7 +38,7 @@ public class Controller {
 			e.printStackTrace();
 			return "unsuccessful";
 		}
-        return "success";
+    	return "{ \"response\" : \"successful\" }";
     }
     
     @RequestMapping("/restart")

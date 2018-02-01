@@ -1,7 +1,12 @@
 angular.module('demo', [])
-.controller('Hello', function($scope, $http) {
-    $http.get('http://rest-service.guides.spring.io/greeting').
+.controller('Image', function($scope, $http) {
+    $http.get('http://localhost:8080/test').
         then(function(response) {
-            $scope.greeting = response.data;
+            $scope.test = response.data;
         });
 });
+
+
+
+
+
